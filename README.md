@@ -10,44 +10,40 @@ Modelar e implementar em Java as funcionalidades do iPhone 2007:
 
 ## 📊 Diagrama UML (Mermaid)
 ```mermaid
-classDiagram 
-    class Iphone {
-    }
-    Iphone ..|> ReprodutorMusical
-    Iphone ..|> AparelhoTelefonico
-    Iphone ..|> NavegadorInternet
-    
-    class ReprodutorMusical {
-        <<interface>>
-        +tocar(): void
-        +pausar(): void
-        +selecionarMusica(musica: String): void
-    }
-    
-    class AparelhoTelefonico {
-        <<interface>>
-        +ligar(numero: String): void
-        +atender(): void
-        +iniciarCorreioVoz(): void
-    }
-    
-    class NavegadorInternet {
-        <<interface>>
-        +exibirPagina(url: String): void
-        +adicionarNovaAba(): void
-        +atualizarPagina(): void
-    }
+# DIO Trilha Java Básico - Desafio POO
+
+## Diagrama UML
+```mermaid
+classDiagram
+class Iphone
+class ReprodutorMusical{
+<<interface>>
++tocar() void
++pausar() void
++selecionarMusica(musica : String) void
+}
+class AparelhoTelefonico{
+<<interface>>
++ligar(numero : String) void
++atender() void
++iniciarCorreioVoz() void
+}
+class NavegadorInternet{
+<<interface>>
++exibirPagina(url : String) void
++adicionarNovaAba() void
++atualizarPagina() void
+}
+Iphone ..|> ReprodutorMusical : implements
+Iphone ..|> AparelhoTelefonico : implements
+Iphone ..|> NavegadorInternet : implements
 
 🏗️ Estrutura do Projeto
 src/
-├── main/
-│   └── Main.java              (Programa interativo)
-├── entities/
-│   └── Iphone.java            (Classe principal)
-└── interfaces/
-    ├── ReprodutorMusical.java
-    ├── AparelhoTelefonico.java
-    └── NavegadorInternet.java
+├── main/Main.java
+├── entities/Iphone.java
+└── interfaces/*
+
 
 🚀 Como Executar
 Clone este repositório
