@@ -1,29 +1,32 @@
-text
-# DIO Trilha Java Básico - Desafio POO
 
-## 🎯 Diagrama UML
-```mermaid
-classDiagram
-    class Iphone
-    class ReprodutorMusical{<<interface>>+tocar() void+pausar() void+selecionarMusica(musica:String) void}
-    class AparelhoTelefonico{<<interface>>+ligar(numero:String) void+atender() void+iniciarCorreioVoz() void}
-    class NavegadorInternet{<<interface>>+exibirPagina(url:String) void+adicionarNovaAba() void+atualizarPagina() void}
-    Iphone ..|> ReprodutorMusical
-    Iphone ..|> AparelhoTelefonico  
-    Iphone ..|> NavegadorInternet
-📁 Estrutura
-text
-src/
-├── main/Main.java
-├── entities/Iphone.java
-└── interfaces/*
-⚡ Executar
-IntelliJ IDEA → Main.java → Run
+DIO Trilha Java Básico - Desafio POO
 
-Console interativo automático!
+🎯 Diagrama UML
+classDiagram 
+class Iphone {
 
-✅ Todas Funcionalidades
-Interface	Status
-Reprodutor Musical	✅
-Aparelho Telefônico	✅
-Navegador Internet	✅
+}
+Iphone ..|> ReprodutorMusical
+Iphone ..|> AparelhoTelefonico
+Iphone ..|> NavegadorInternet
+
+class ReprodutorMusical {
+    <<interface>>
+    +tocar(): void
+    +pausar(): void
+    +selecionarMusica(musica: String): void
+}
+
+class AparelhoTelefonico {
+    <<interface>>
+    +ligar(numero: String): void
+    +atender(): void
+    +iniciarCorreioVoz(): void
+}
+
+class NavegadorInternet {
+    <<interface>>
+    +exibirPagina(url: String): void
+    +adicionarNovaAba(): void
+    +atualizarPagina(): void
+}
